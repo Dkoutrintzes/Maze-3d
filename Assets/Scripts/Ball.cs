@@ -30,6 +30,14 @@ public class Ball : MonoBehaviour
             did_reset = true;
         }
 
+        if (state == "testreset" && !did_reset)
+        {      
+            print("Test resetting ball");
+            transform.localPosition = get_ball_test_init_pos();
+            transform.rotation = ball_init_rot;
+            did_reset = true;
+        }
+
         if (state == "try_game" && is_done)
         {
             transform.localPosition = get_ball_init_pos();

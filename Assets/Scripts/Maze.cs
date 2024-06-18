@@ -53,6 +53,15 @@ public class Maze : MonoBehaviour
                 reset_maze();
                 break;
             }
+            case "testreset":
+            {   
+                if(on_pause)
+                {
+                    break;
+                }
+                reset_maze();
+                break;
+            }
             case "step":
             {   
 

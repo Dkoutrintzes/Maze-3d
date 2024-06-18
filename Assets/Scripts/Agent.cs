@@ -154,6 +154,22 @@ public class Agent : MonoBehaviour
                     is_done = false;    // game will start
                     break;
                 }
+                case "testreset":
+                {
+                    reset_response = new ResetResponse {observation = get_observation()};     // set the response with the initial observation of the environment
+                    reset_response.pause = on_pause;
+                    print("reset response is set");
+                    yield return do_command_request("POST", "/reset_done", reset_response.to_json(), () =>
+                    {
+                        episode_paused_time = 0;
+                        pause_time = 0;
+                        episode_started = DateTime.Now;
+                    });     // send the response
+                    print("reset response is sent");
+                    freeze_game = true;   // freeze the game
+                    is_done = false;    // game will start
+                    break;
+                }
                 case "step":
                 {
                     freeze_game = false;    // unfreeze the game

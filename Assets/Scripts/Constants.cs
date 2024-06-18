@@ -34,4 +34,25 @@ public static class Constants
         currentPosIndex = (currentPosIndex + 1) % ball_init_pos.Count;
         return currentPosition;
     }
+
+    public static Vector3 get_ball_test_init_pos()
+    {
+        Vector3 v0 = ball_init_pos[0];
+        Vector3 v1 = ball_init_pos[1];
+        Vector3 v2 = ball_init_pos[2];
+
+        float u = UnityEngine.Random.value;
+        float v = UnityEngine.Random.value;
+
+        // Ensure that u and v lie within the triangle
+        if (u + v > 1)
+        {
+            u = 1 - u;
+            v = 1 - v;
+        }
+
+        // Calculate the point using barycentric coordinates
+        Vector3 randomPoint = v0 + u * (v1 - v0) + v * (v2 - v0);
+        return randomPoint;
+    }
 }

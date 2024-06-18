@@ -129,6 +129,16 @@ public class SocketAgent : MonoBehaviour
                     var res_json = JsonUtility.ToJson(reset_response);
                     write_socket(res_json);
                     break;
+                case "testreset":
+                    start_time = DateTime.Now;
+                    print("testreset");
+                    // reset_ball(gameObject, BALL);
+
+                    reset_response.observation = get_observation();
+                    reset_response.setting_up_duration = 0;
+                    var res_json2 = JsonUtility.ToJson(reset_response);
+                    write_socket(res_json2);
+                    break;
                 case "request_status":
                     reset_response.pause = on_pause;
                     var res_json_2 = JsonUtility.ToJson(reset_response);
