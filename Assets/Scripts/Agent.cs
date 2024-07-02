@@ -286,6 +286,11 @@ public class Agent : MonoBehaviour
                 }
             }
         step_response.agent_action = step_request.action_agent;
+
+        if(game_config.human_only)
+        {
+            step_response.agent_action = input_z;
+        }
     }
 
     float[] get_observation()

@@ -1,5 +1,3 @@
-Original Github: 
-
 # Maze Unity
 This is a graphical simulation developed in Unity based on the real world experiment from [1] and used from the [H-AI_collab_game](https://github.com/ligerfotis/maze_RL_online)
 

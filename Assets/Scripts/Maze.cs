@@ -65,7 +65,7 @@ public class Maze : MonoBehaviour
             case "step":
             {   
 
-                move_maze(game_config.human_assist, false, game_config.discrete_input, false,true, RANDOM_HUMAN);
+                move_maze(game_config.human_assist, game_config.human_only, game_config.discrete_input, false,true, RANDOM_HUMAN);
                 break;
             }
             case "step_two_agents":
