@@ -26,8 +26,8 @@ https://www.jetbrains.com/help/rider/Unity.html#getting-started
 ### Play
 
 #### Prerequisites 
-* Start the dedicated [Maze Server](https://github.com/panos-stavrianos/maze_server)
-* Start the experiment [MazeRL](https://github.com/ligerfotis/maze_RL_online) 
+* Start the dedicated [Maze Server](https://github.com/Dkoutrintzes/Maze3D-Docker-Server)
+* Start the experiment [Maze Experiment](https://github.com/Dkoutrintzes/Maze-Experiment)
 
 #### Play in Unity Editor
 Just open the game in Unity and press the `play` button.
