@@ -12,7 +12,7 @@ H-AI_collab_game and maze_GI_Unity work as HTTP clients.
 ### Edit MazeUnity
 * Download git
   
-      git clone https://github.com/ligerfotis/MazeUnity.git
+      git clone https://github.com/Dkoutrintzes/Maze-3d.git
   
 * [Install Unity](https://docs.unity3d.com/2020.1/Documentation/Manual/GettingStartedInstallingHub.html) (Version: 2020.3.13f1)
 * Open with unity
